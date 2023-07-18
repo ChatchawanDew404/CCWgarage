@@ -1,0 +1,137 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+.productBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    background: url('../../../public/images/banner2.jpg');
+   background-size: cover;
+   background-position: center;
+
+}
+.productBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 0;
+}
+
+.productBanner .content{
+    text-align: center;
+    z-index: 1;
+}
+.productBanner .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+.productBanner .content p{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.productBanner .content p .link span{
+    color:white;
+}
+.productBanner .content p .link:nth-child(3) span{
+   color: var(--red-color);
+}
+
+
+
+
+/* Register Container */
+.register_container{
+    max-width: 60rem;
+    margin: auto;
+}
+.register_container .container{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+.register_container .container .heading{
+    margin-bottom: 5rem;
+}
+.register_container .container .heading h2{
+   font-size: 4rem;
+   font-family: Arial, Helvetica, sans-serif;
+   letter-spacing: -1px;
+   font-weight:600;
+}
+.register_container .container .heading p{
+   max-width: 40rem;
+   margin: auto;
+   margin-top: 2rem;
+   color: var(--gray-color-2);
+   line-height: 25px;
+   font-weight: 300;
+}
+
+.register_container .container .registerFrom input{
+    width: 100%;
+    padding: 1.7rem;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgb(0, 0, 0,0.3);
+    outline: none;
+}
+
+
+.register_container .container .registerFrom .inputCheckBx{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    color: rgb(105, 104, 104);
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.register_container .container .registerFrom .inputCheckBx .checkBx{
+    width: 1.5rem;
+    margin-right: 1rem;
+
+}
+
+.register_container .container .registerFrom button{
+   color: white;
+   background: var(--red-color);
+   outline: none;
+   border: none;
+   display: block;
+   padding:1.5rem 1rem;
+   margin: 2rem 0 3rem;
+   width: 100%;
+   font-size: 1.7rem;
+}
+.register_container .container .registerFrom button:hover{
+background: var(--red-color-hover);
+cursor: pointer;    
+}
+.register_container .container .registerFrom .already_have_acc_tx{
+    font-size: 1.7rem;
+}
+.register_container .container .registerFrom .link{
+    color: var(--red-color);
+}
+
+
+

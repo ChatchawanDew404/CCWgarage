@@ -1,0 +1,129 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+  
+footer{
+    background: #191f23;
+    padding: 5rem 0;
+}
+footer .container .footer-row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    padding: 2rem 0;
+    color: rgb(207, 205, 205);
+}
+footer .container .footer-row .footer-col .showLogo{ 
+    width: 15rem;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding:0 1rem;
+    margin-bottom: 3rem;
+}
+
+footer .container .footer-row .footer-col h3{ 
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--white-color);
+}
+footer .container .footer-row .footer-col p{ 
+    font-size: 1.5rem;
+    line-height: 22px;
+    margin-bottom: 2rem;
+}
+footer .container .footer-row .footer-col span{ 
+  background: #000;
+  padding: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+ margin-right: 1rem;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255,0.5);
+}
+footer .container .footer-row .footer-col span:hover{ 
+  color: var(--red-color);
+  border-color: var(--red-color);
+  cursor: pointer;
+}
+
+
+footer .container .footer-row .footer-col ul li{ 
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(61, 60, 60);
+    transition: all .3s ease;
+}
+footer .container .footer-row .footer-col ul li .footer-link{ 
+    transition: all .3s ease;
+color: var(--white-color);
+}
+footer .container .footer-row .footer-col ul li .bx-icon{ 
+   margin-right: .5rem;
+}
+footer .container .footer-row .footer-col ul li:hover{ 
+    margin-left: 1rem;
+    color: var(--red-color);
+}
+footer .container .footer-row .footer-col ul li:hover .footer-link{ 
+    color: var(--red-color);
+}
+footer .container .footer-row .footer-col .send-message-form .inputBx input{
+width: 100%;
+padding: 1rem;
+background: none;
+color: white;
+outline: none;
+border: 1px solid rgb(255, 255, 255,0.5);
+border-radius: 5px;
+margin-bottom: 1rem;
+}
+footer .container .footer-row .footer-col .send-message-form .textarea{
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    color: white;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255,0.5);
+    border-radius: 5px;
+    min-height: 10rem;
+    margin-bottom: 1rem;
+    resize: none;
+}
+footer .container .footer-row .footer-col .send-message-form .send-form-btn{
+    background: var(--red-color);
+    color: white;
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 1rem;
+}
+footer .container .footer-row .footer-col .send-message-form .send-form-btn:hover{
+   cursor: pointer;
+   background: var(--red-color-hover);
+   cursor: pointer;
+}
+
+/* *{border: 1px solid red;} */
+
+@media only screen and (max-width: 991px) {
+    footer .container .footer-row{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width: 768px) {
+    footer .container .footer-row{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 480px) {
+    footer .container .footer-row{
+        grid-template-columns: 1fr;
+    }
+}

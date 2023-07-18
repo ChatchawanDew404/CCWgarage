@@ -1,0 +1,214 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+.loginBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    background: url('../../../public/images/banner2.jpg');
+   background-size: cover;
+   background-position: center;
+
+}
+.loginBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 0;
+}
+
+.loginBanner .content{
+    text-align: center;
+    z-index: 1;
+}
+.loginBanner .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+.loginBanner .content p{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.loginBanner .content p .link span{
+    color:white;
+}
+.loginBanner .content p .link:nth-child(3) span{
+   color: var(--red-color);
+}
+
+
+/*----------- login_container -------- */
+.login_container{
+    max-width: 60rem;
+    margin: auto;
+}
+
+.login_container .container{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+/* heading */
+.login_container  .container .heading{
+    margin-bottom: 5rem;
+}
+.login_container  .container .heading h2{
+   font-size: 4rem;
+   font-family: Arial, Helvetica, sans-serif;
+   letter-spacing: -1px;
+   font-weight:600;
+}
+.login_container  .container .heading p{
+   max-width: 40rem;
+   margin: auto;
+   margin-top: 2rem;
+   color: var(--gray-color-2);
+   line-height: 25px;
+   font-weight: 300;
+}
+/* input from */
+.login_container .container .loginFrom .inputBx input{
+    width: 100%;
+    padding: 1.7rem;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgb(0, 0, 0,0.3);
+    outline: none;
+}
+
+.login_container .container .loginFrom  button{
+    color: white;
+    background: var(--red-color);
+    outline: none;
+    border: none;
+    display: block;
+    padding:1.5rem 1rem;
+    margin: 2rem 0 3rem;
+    width: 100%;
+    font-size: 1.7rem;
+ }
+ .login_container .container .loginFrom  button:hover{
+ background: var(--red-color-hover);
+ cursor: pointer;    
+ }
+
+/* line */
+.login_container  .container .loginFrom .line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 5rem 0;
+    background: rgb(212, 212, 212,0.5);
+}
+
+.login_container  .container .loginFrom .line::after{
+    content: 'Or';
+    color: #d4d4d4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #f9f9f9;
+    color: var(--gray-color-2);
+    padding: 0 15px;
+    font-size: 2rem;
+}
+/* remember_me_and_forgetPwd_Bx */
+.login_container  .container .loginFrom .remember_me_and_forgetPwd_Bx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0 3rem;
+}
+.login_container  .container .loginFrom .remember_me_and_forgetPwd_Bx .rememberMe_bx{
+    display: flex;
+    align-items: center;
+}
+.login_container  .container .loginFrom .remember_me_and_forgetPwd_Bx .rememberMe_bx input{ 
+ margin-right: 1rem;
+}
+.login_container  .container .loginFrom .remember_me_and_forgetPwd_Bx .rememberMe_bx span{
+ color: var(--gray-color-2);
+}
+
+
+.login_container  .container .loginFrom .remember_me_and_forgetPwd_Bx .forgotPwd_link{
+    color: var(--red-color);
+}
+.login_container  .container .loginFrom .remember_me_and_forgetPwd_Bx .forgotPwd_link:hover{
+   text-decoration: underline;
+}
+
+/* social icon bx */
+.login_container .container .loginFrom .social_login_bx{
+    margin-bottom: 5rem;
+}
+
+.login_container .container .loginFrom .social_login_bx .facebook_bx,
+.login_container .container .loginFrom .social_login_bx .google_bx,
+.login_container .container .loginFrom .social_login_bx .twitter_bx{
+margin-bottom: 2rem;
+border: 1px solid rgba(0,0,0,.2);
+padding: 1.5rem 0;
+font-size: 1.7rem;
+position: relative;
+color: var(--gray-color-2);
+cursor: pointer;
+}
+    
+.login_container .container .loginFrom .social_login_bx .bx-icon{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: all .3s ease;
+}
+
+.login_container .container .loginFrom .social_login_bx .facebook_bx{
+    background: #4267b2;
+    color: var(--white-color);
+    border: 1px solid #4267b2;
+}
+.login_container .container .loginFrom .social_login_bx .twitter_bx{
+    background: #4aa8fb;
+    color: var(--white-color);
+    border: 1px solid #4aa8fb;
+}
+
+.login_container .container .loginFrom .social_login_bx .facebook_bx:hover .bx-icon,
+.login_container .container .loginFrom .social_login_bx .google_bx:hover .bx-icon,
+.login_container .container .loginFrom .social_login_bx .twitter_bx:hover .bx-icon{
+padding-left: 1rem;
+font-size: 3rem;
+}
+
+
+
+/* new user link */
+ .login_container  .container .loginFrom .are_you_new_tx{
+    font-size: 1.7rem;
+}
+.login_container  .container .loginFrom .link{
+    color: var(--red-color);
+}

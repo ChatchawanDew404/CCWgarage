@@ -1,0 +1,348 @@
+:root{
+  --red-color:#d81324;
+  --red-color-hover:rgb(141, 12, 23);
+  --white-color:#fff;
+  --gray-color-1:#272727;
+  --gray-color-2:#494848;
+  --black-color:#000;
+}
+
+/* -------------------------------------- */
+/*                NAVBAR TOP              */
+/* -------------------------------------- */
+.navbar-top {
+    width: 100%;
+    background: rgb(231, 231, 231);
+}
+.navbar-top .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.boxIcons{color: var(--red-color); font-size: 1.7rem;}
+
+/* Navbar top (left) */
+.navbar-top .navbar-top-left span{
+    margin-right: 15px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.navbar-top .navbar-top-left span .boxIcons{
+    margin-right: 5px;
+}
+
+
+/* Navbar top (right) */
+.navbar-top  .navbar-top-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.navbar-top .navbar-top-right span{
+    margin-right: 15px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.navbar-top .navbar-top-right span .boxIcons{
+    margin-right: 8px;
+}
+.navbar-top .navbar-top-right .social-box{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 4px;
+}
+.navbar-top .navbar-top-right .social-box li{
+    background: var(--white-color);
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: all .3s ease;
+}
+.navbar-top .navbar-top-right .social-box li:hover{
+    color: var(--white-color);
+    background: var(--red-color);
+    cursor: pointer;
+}
+.navbar-top .navbar-top-right .social-box li:hover .boxIcons{
+    color: var(--white-color);
+}
+
+
+/* -------------------------------------- */
+/*                NAVIGATION              */
+/* -------------------------------------- */
+.navigation{
+    width: 100%;
+    background: white;
+    position: relative;
+    transition: all .3s ease;
+    z-index: 100;
+}
+/* sticky navigation */
+.navigation.sticky{
+    position: sticky;
+    top: -100px;
+    left: 0;
+    animation: navAnimate 1s .5s forwards;
+    opacity: 0;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    transition: all .3s ease;
+}
+
+@keyframes navAnimate{
+    from{top:-100px;opacity: 0;}
+    to{top:-1px;opacity: 1;}
+}
+/* ----------------- */
+
+.navigation .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+}
+
+.navigation .logo img{
+   width: 20rem;
+}
+.navigation .left-navbar-bx{
+    display: flex;
+    align-content: center;
+}
+
+.navigation .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.navigation .navbar li .navLink{
+    color:var(--gray-color-1) ;
+    font-size: 1.7rem;
+}
+.navigation .navbar li .navLink:hover{
+color: var(--red-color);
+}
+
+.navigation .left-navbar-bx .menu-bar{
+    display: none;
+    cursor: pointer;
+}
+
+.navigation .other_btn_Bx{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 3rem;
+}
+
+
+.navigation .other_btn_Bx .btn_search,
+.navigation .other_btn_Bx .btn_account,
+.navigation .other_btn_Bx .btn_cart
+{
+    background: rgb(243, 243, 243,0.6);
+    color: var(--black-color);
+    font-weight: 400;
+    border-radius: 3px;
+    transition: all .3s ease;
+    font-size: 1.8rem;
+    padding: .75rem 1rem; 
+    border: 1px solid rgb(0, 0, 0,0.2);
+}
+
+.navigation .other_btn_Bx .btn_search:hover,
+.navigation .other_btn_Bx .btn_account:hover,
+.navigation .other_btn_Bx .btn_cart:hover{
+    background: var(--red-color);
+    color: white;
+    cursor: pointer;
+}
+
+/* ------------------ */
+.navigation .other_btn_Bx .account_btn_bx,
+.navigation .other_btn_Bx .search_btn_Bx
+{
+    position: relative;
+}
+/* search btn */
+.navigation .other_btn_Bx .search_btn_Bx .searchInputBx{
+    top: 65px;
+    position: absolute;
+    display: flex;
+    left:-120px;
+    width:25rem;
+    padding: 1.5rem;
+    background: rgb(254, 252, 252);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.navigation .other_btn_Bx .search_btn_Bx .searchInputBx.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navigation .other_btn_Bx .search_btn_Bx .searchInputBx input{
+ width: 100%;
+ padding: 1.5rem 4rem 1.5rem 1rem;
+ border: 1px solid rgb(0, 0, 0,.5);
+ outline: none;
+}
+.navigation .other_btn_Bx .search_btn_Bx .searchInputBx .bx-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    cursor: pointer;
+}
+.navigation .other_btn_Bx .search_btn_Bx .searchInputBx .bx-icon:hover{
+  color: var(--red-color);
+}
+
+/* register */
+.navigation .other_btn_Bx .account_btn_bx .manageAccountBx{
+    position: absolute;
+    top: 65px;
+    left:-65px;
+    min-width: 15rem;
+    width: 100%;
+    padding:.5rem 1rem;
+    background: rgb(254, 252, 252);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.navigation .other_btn_Bx .account_btn_bx .manageAccountBx.active{
+    visibility: visible;
+    opacity: 1;
+}
+.navigation .other_btn_Bx .account_btn_bx .manageAccountBx .link{
+  display: block;
+  padding: 1.5rem 1rem;
+  color: black;
+}
+
+.navigation .other_btn_Bx .account_btn_bx .manageAccountBx .link:hover{
+ color: var(--red-color);
+ cursor: pointer;
+}
+/* ------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+@media only screen and (max-width: 991px) {
+    /* navbar responsive */
+    .navigation .navbar{
+        display: block;
+        top: 100%;
+        left: 0;
+      width: 100%;
+      position: absolute;
+      background: white;
+      box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+      padding:2rem;
+      z-index: 10;
+      opacity: 0;
+      transition: all .3s ease;
+      visibility: hidden;
+    }
+    .navigation .navbar.active{
+     opacity: 1;
+     visibility: visible;
+    }
+    .navigation .navbar li .navLink{
+        margin: 1rem 0;
+        padding: 1.5rem ;
+        display: block;
+        border: 1px solid rgb(172, 167, 167);
+        border-radius: 5px;
+        
+    }
+
+    .navigation .register_Login_Bx{
+        margin-left: 1rem;
+    }
+    .navigation .left-navbar-bx .menu-bar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--gray-color-2);
+        padding: .2rem 1rem;
+        border-radius: 3px;
+    }
+    .navigation .left-navbar-bx .menu-bar .menu-icon{
+        font-size: 3rem;
+        color: var(--gray-color-2);
+    }
+
+    .navigation .other_btn_Bx{
+        margin-left: 1.5rem;
+    }
+
+    /* search bx */
+    .navigation .other_btn_Bx .search_btn_Bx .searchInputBx{
+        top: 6rem;
+        left:-105px;
+    }
+}
+
+
+@media only screen and (max-width: 678px) {
+    .navbar-top .container{
+        display: block;
+    }
+    .navbar-top .navbar-top-left span{
+       display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+  /* search bx */
+  .navigation .other_btn_Bx .search_btn_Bx .searchInputBx{
+    top: 7rem;
+    position: absolute;
+    display: flex;
+    left:-95px;
+}
+
+.navigation .other_btn_Bx .search_btn_Bx .searchInputBx input{
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 1px solid rgb(0, 0, 0,.5);
+    outline: none;
+   }
+
+   
+}
+
+
+@media only screen and (max-width: 380px) {
+    .navigation .container{
+        padding: .7rem;
+    }
+    .navigation .logo img{
+        width: 15rem;
+     }
+}

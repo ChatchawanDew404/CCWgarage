@@ -1,0 +1,237 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+.serviceBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    background: url('../../../public/images/banner2.jpg');
+   background-size: cover;
+   background-position: center;
+
+}
+
+.serviceBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 0;
+}
+
+.serviceBanner .content{
+    text-align: center;
+    z-index: 1;
+}
+.serviceBanner .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+.serviceBanner .content p{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.serviceBanner .content p .link span{
+    color:white;
+}
+.serviceBanner .content p .link:nth-child(3) span{
+   color: var(--red-color);
+}
+
+
+/* price Table section */
+.priceTable .container .swiper{
+    padding: 3rem 0;
+}
+.priceTable .container .priceTable-bx{
+    text-align: center;
+   background: #ffffff;
+    padding-bottom: 3rem;
+    transform: scale(.8);
+    transition: all .3s ease;
+    opacity: .8;
+}
+.priceTable .container .swiper-slide-active{
+   transform: scale(1);
+   background: #f2f2f2;
+   opacity: 1;
+   box-shadow: 17px 11px 20px -6px rgba(17,17,68,0.31);
+}
+.priceTable .container .priceTable-bx h3{
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    background: rgb(219,0,0);
+    background: linear-gradient(90deg, rgba(219,0,0,1) 0%, rgba(255,37,37,1) 0%, rgba(145,0,0,1) 100%);
+    color: white;
+    padding: 3rem 0 4rem;
+clip-path: polygon(0 0 ,100% 0, 100% 70%, 50% 100% ,0 70%);
+margin-bottom: 3rem;
+}
+
+.priceTable .container .swiper-slide-active h3{
+    transform: scale(1);
+    background: red;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(128,0,0,1) 100%);
+} 
+
+.priceTable .container .priceTable-bx .detail .price{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.priceTable .container .priceTable-bx .detail p{
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+    padding: 1rem 3rem;
+    background: linear-gradient(90deg, rgb(244, 49, 49) 0%, rgb(182, 0, 0) 100%);
+}
+.priceTable .container .priceTable-bx .detail ul{
+    margin-bottom: 3rem;
+}
+.priceTable .container .priceTable-bx .detail ul li{
+    padding: 1.5rem 0;
+    color: var(--gray-color-2);
+    border-bottom: 1px solid rgba(198, 196, 196, 0.5);
+}
+.priceTable .container .priceTable-bx .detail ul li .bx-icon{
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+.priceTable .container .priceTable-bx .detail ul li .bx-icon.true{
+    color: green;
+}
+.priceTable .container .priceTable-bx .detail ul li .bx-icon.false{
+    color: var(--red-color);
+}
+
+.priceTable .container .priceTable-bx  button{
+    padding:1.5rem 4rem;
+    color: white;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(128,0,0,1) 100%);
+    border: none;
+    outline: none;
+}
+
+.priceTable .container .priceTable-bx  button:hover{
+background: #000;
+cursor: pointer;
+}
+
+
+
+
+/* service Detail Section*/
+.serviceDetail .container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+    /* padding: 0 3rem 0 0; */
+    padding: 1rem;
+}
+.serviceDetail .container .showDetailService{
+    display: grid;grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+}
+
+
+.serviceDetail .container .showDetailService .detail-bx{
+    background: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-top: 3px solid red;
+    border-bottom: 3px solid rgb(239, 164, 164,.2);
+}
+.serviceDetail .container .showDetailService .detail-bx h3{
+   color: var(--gray-color-1);
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+}
+.serviceDetail .container .showDetailService .bx-icon{
+    color: var(--red-color);
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+}
+.serviceDetail .container .showDetailService .detail-bx p{
+   color: var(--gray-color-2);
+   font-size: 1.5rem;
+   opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 991px) {
+    .serviceDetail .container .showDetailService .detail-bx h3{
+   margin-bottom: 1.5rem;
+}
+
+.serviceDetail .container .showDetailService .detail-bx .bx-icon{
+    color: var(--red-color);
+    margin-right: .5rem;
+    font-size: 3rem;
+}
+ /* car image service */
+    .serviceDetail .container .showDetailService{
+        gap: 1rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    /* car image service */
+    .serviceDetail .container{
+        grid-template-columns:1fr;
+         padding: 1.5rem;
+     }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .serviceDetail .container .showDetailService{
+       grid-template-columns: 1fr;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 380px) {
+    .priceTable .container .priceTable-bx h3{
+        font-size: 2.4rem;
+    }
+  }
+  

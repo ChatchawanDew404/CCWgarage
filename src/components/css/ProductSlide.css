@@ -1,0 +1,97 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+  
+.product-col{
+    background: #f8f8f8;
+    text-align: center;
+}
+.product-col .image{
+   background: rgb(239, 239, 239,0.3);
+   height: 300px;
+   display: block;
+   margin-bottom: 2rem;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all .3s ease;
+}
+.product-col .image::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0,0.8);
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.product-col .image .view-buy-product-bx{
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+z-index: 1;
+transition: all .3s ease;
+opacity: 0;
+visibility: hidden;
+}
+
+.product-col .image .view-buy-product-bx .bx-icons{
+background: var(--red-color);
+color: white;
+padding: 1rem;
+font-size: 4.5rem;
+}
+.product-col .image .view-buy-product-bx .bx-icons:hover{
+    background: var(--red-color-hover);
+    cursor: pointer;
+    }
+    
+
+.product-col .image:hover:after{
+opacity: 1;
+visibility: visible;
+}
+
+.product-col .image:hover 
+.view-buy-product-bx{
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-col .image p{
+color: rgba(207, 205, 205, 0.9);
+font-size: 5rem;
+}
+.product-col .rate {
+    margin-bottom: 1rem;
+}
+.product-col .rate .bx-icon{
+color: var(--red-color);
+}
+
+.product-col .product-name{
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    color:var(--gray-color-1);
+}
+.product-col .product-price{
+font-size: 1.9rem;
+color:var(--gray-color-1);
+}

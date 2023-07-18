@@ -1,0 +1,188 @@
+:root{
+  --red-color:#d81324;
+  --red-color-hover:rgb(141, 12, 23);
+  --white-color:#fff;
+  --gray-color-1:#272727;
+  --gray-color-2:#494848;
+  --black-color:#000;
+}
+/* Work shop section */
+.workshop{
+    padding: 5rem 0;
+    background: url('/public/images/workshop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .workshop::after{
+    content: '';
+    background: rgba(33, 33, 33, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .workshop .container .work-row-bx{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+  }
+  
+  /* work col left */
+  .workshop .container .work-row-bx .work-col-left .image{
+  position: relative;
+  border: 4px solid var(--white-color);
+  border-radius: 5px;
+  }
+  .workshop .container .work-row-bx .work-col-left .playVideo-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #cb0919;
+    padding: 2.5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    border: 5px solid white;
+  }
+  .workshop .container .work-row-bx .work-col-left .playVideo-btn:hover{
+    background: var(--red-color-hover);
+    cursor: pointer;
+  }
+  
+  /* work col right */
+  .workshop .container .work-row-bx .work-col-right{
+    color: var(--white-color);
+  }
+  .workshop .container .work-row-bx .work-col-right h3{
+  font-weight: 400;
+  }
+  .workshop .container .work-row-bx .work-col-right h2{
+  margin: 1rem 0;
+  font-size: 4rem;
+  font-weight: 500;
+  }
+  .workshop .container .work-row-bx .work-col-right p{
+  line-height: 2.7rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  }
+  .workshop .container .work-row-bx .work-col-right .view-more-work-btn{
+  background: var(--red-color);
+  color: var(--white-color);
+  padding: 1rem 4rem;
+  outline: none;
+  border: none;
+  display: inline-block;
+  }
+  .workshop .container .work-row-bx .work-col-right .view-more-work-btn:hover{
+    background: var(--red-color-hover);
+    cursor: pointer;
+  }
+/* Show Video Popup */
+.showVideoPopup{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  z-index: 105;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+.showVideoPopup.active{
+opacity: 1;
+visibility: visible;
+}
+
+
+.showVideoPopup .bx-icon{
+background: white;
+color: black;
+padding: .5rem;
+font-size: 5rem;
+position: absolute;
+top: 30px;
+right: 30px;
+}
+.showVideoPopup .bx-icon:hover{
+background: var(--red-color);
+color: white;
+cursor: pointer;
+}
+.showVideoPopup .videoBx{
+  max-width: 90rem;
+  width: 100%;
+}
+.showVideoPopup .videoBx video{
+  max-width: 90rem;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+@media only screen and (max-width: 991px) {
+    /* work shop secion */
+    .workshop .container .work-row-bx .work-col-right h2{
+      margin: 1rem 0;
+      font-size: 3rem;
+      }
+    .workshop .container .work-row-bx .work-col-right p{
+  font-size: 1.5rem;
+      }
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    /* work shop section */
+    .workshop .container .work-row-bx{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 30px 0;
+    }
+    .workshop .container .work-row-bx .work-col-right h2{
+      font-size: 4rem;
+      }
+    .workshop .container .work-row-bx .work-col-right p{
+  font-size: 1.6rem;
+      }
+    
+  }
+  
+  @media only screen and (max-width: 480px) {
+  /* work shop section */
+  .workshop .container .work-row-bx .work-col-right h2{
+    font-size: 3rem;
+    }
+  .workshop .container .work-row-bx .work-col-right p{
+  font-size: 1.5rem;
+    }
+  
+  }
+  

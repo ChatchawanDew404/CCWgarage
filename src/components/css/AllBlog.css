@@ -1,0 +1,85 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+.blog .heading{
+    text-align: center;
+  }
+  
+  .blog  .container .heading h2{
+    text-transform: uppercase;
+    margin-bottom: 8rem;
+    font-size: 3.5rem;
+    color: var(--gray-color-1);
+  }
+  
+  .blog .container .blog-bx .image img{
+    display: block;
+    height: 25rem;
+  }
+  .blog .container .blog-bx .content{
+    padding:2rem 1.5rem;
+    background: #f4f4f4;
+  }
+  
+  .blog .container .blog-bx .content .title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--gray-color-1);
+    margin: 1rem 0 3rem;
+    position: relative;
+  }
+  .blog .container .blog-bx .content .title::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2.5px;
+    width: 7rem;
+    background: var(--red-color);
+  }
+  
+  .blog .container .blog-bx .content .creator{
+    color: rgb(112, 111, 111);
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+  }
+  .blog .container .blog-bx .content .creator .bx-icon{
+    color: var(--red-color);
+    margin-right:1rem ;
+  }
+  .blog .container .blog-bx .content .creator .name{
+    margin-right: .5rem;
+  }
+  .blog .container .blog-bx .content .creator .date{
+    margin-left: .5rem;
+  }
+  
+  .blog .container .blog-bx .content .text{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: rgb(104, 103, 103);
+  }
+  .blog .container .blog-bx .content .btn-blog{
+   background: var(--red-color);
+   color: white;
+   padding: 1rem 3rem;
+   display: inline-block;
+   outline: none;
+  border: none;
+  font-size: 1.2rem;
+  }
+  .blog .container .blog-bx .content .btn-blog:hover{
+    background: var(--red-color-hover);
+    cursor: pointer;
+  }
+  
+  
+  
+
+

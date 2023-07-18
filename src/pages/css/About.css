@@ -1,0 +1,206 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+.aboutBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    background: url('../../../public/images/banner2.jpg');
+   background-size: cover;
+   background-position: center;
+
+}
+.aboutBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 0;
+}
+
+.aboutBanner .content{
+    text-align: center;
+    z-index: 1;
+}
+.aboutBanner .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+.aboutBanner .content p{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.aboutBanner .content p .link span{
+    color:white;
+}
+.aboutBanner .content p .link:nth-child(3) span{
+   color: var(--red-color);
+}
+
+/* About container 2 */
+.about2 .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+}
+
+.about2 .container .about2-left h2{
+color: var(--red-color);
+font-size: 3.8rem;
+margin-bottom: 2rem;
+}
+.about2 .container .about2-left p{
+    font-size: 1.5rem;
+margin-bottom: 2rem;
+color: var(--gray-color-2);
+line-height: 26px;
+}
+.about2 .container .about2-right{
+position: relative;
+}
+
+.about2 .container .about2-right .box-1{
+position:absolute;
+height: 4rem;
+width: 4rem;
+background: rgb(255, 0, 0,0.7);
+top: -15px;
+right: -10px;
+border-radius: 5px;
+display: block;
+}
+.about2 .container .about2-right .box-2{
+    position:absolute;
+    height: 5rem;
+    width: 5rem;
+    background: rgba(4, 4, 4, 0.5);
+   bottom: -30px;
+    left: -30px;
+    border-radius: 5px;
+    display: block;
+}
+
+
+/* About container 3 */
+.about3{
+    background: var(--red-color);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.about3 .about3-left{
+  padding:5rem 8rem 5rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.about3 .about3-left .text-container{
+    max-width: 50rem;
+}
+.about3 .about3-left .text-container h2{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.about3 .about3-left .text-container .about-content{
+display: flex;
+justify-content: center;
+align-items: center;
+    gap: 2rem;
+}
+.about3 .about3-left .text-container .about-content h3{
+font-size: 2.3rem;
+margin-bottom: .5rem;
+}
+
+.about3 .about3-left .text-container .about-content .bx-icon{
+    font-size: 15rem;
+}
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+
+@media only screen and (max-width: 991px) {
+    /* About container 2 */
+    .about2 .container .about2-left h2{
+        color: var(--red-color);
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        }
+
+        /* About container 3 */
+        .about3 .about3-left{
+            padding:5rem 5rem 5rem 2rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+          }
+  }
+  
+@media only screen and (max-width: 786px) {
+    /* About container 2 */
+    .about2 .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    /* About container 3 */
+    .about3{
+        background: var(--red-color);
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .about3 .about3-left{
+        padding:5rem 2rem;
+        display: block;
+      }
+  }
+  
+  @media only screen and (max-width: 380px){
+     /* About container 3 */
+    .about3 .about3-left .text-container h2{
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+    }
+    
+    .about3 .about3-left .text-container .about-content{
+    margin-bottom: 2rem;
+    }
+    .about3 .about3-left .text-container .about-content h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    }
+    
+    .about3 .about3-left .text-container .about-content .bx-icon{
+        font-size: 13rem;
+    }
+  }

@@ -1,0 +1,178 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#383838;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+
+.blogBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    background: url('../../../public/images/banner2.jpg');
+   background-size: cover;
+   background-position: center;
+
+}
+.blogBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 0;
+}
+
+.blogBanner .content{
+    text-align: center;
+    z-index: 1;
+}
+.blogBanner .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+.blogBanner .content p{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.blogBanner .content p .link span{
+    color:white;
+}
+.blogBanner .content p .link:nth-child(3) span{
+   color: var(--red-color);
+}
+
+
+
+/*------------- Blog Container */
+.blogContainer .container{
+    margin-top: 6rem;
+display: grid;
+grid-template-columns: 3fr 1fr;
+gap: 3rem;
+margin-bottom: 15rem;
+}
+
+
+/*---- Blog Left Bx */
+.blogContainer .container .blog-left-layout .blogRow{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:5rem 2rem;
+}
+
+/* blog img */
+.blogContainer .container .blog-left-layout .blogRow .blogBx .blogImg{
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.blogContainer .container .blog-left-layout .blogRow .blogBx .blogImg img{
+    position: relative;
+    display: block;
+}
+.blogContainer .container .blog-left-layout .blogRow .blogBx .blogImg .blogPostDate{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: var(--red-color);
+    font-size: 1.2rem;
+    padding: .6rem;
+    border-radius: 5px;
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent .blogTitle{
+ font-weight: 500;
+font-size: 2.3rem;
+margin-bottom: 1rem;
+position: relative;
+}
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent .blogData {
+ margin-bottom: 1rem;
+}
+
+
+
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent 
+.creatorName{
+    margin-right: .5rem;
+    font-size: 1.4rem;
+    color: var(--gray-color-1);
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent 
+.blogData .creatorName .bx-icon{
+   color: var(--red-color);
+   font-size: 1.4rem;
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent 
+.blogData .comment{
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    color: var(--gray-color-1);
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent 
+.blogData .comment .bx-icon{
+   color: var(--red-color);
+   font-size: 1.6rem;
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent .description{
+    color:rgb(80, 79, 79);
+    font-size: 1.5rem;
+    line-height: 23px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent .readMoreBtn{
+    color: white;
+    background: var(--red-color);
+    padding: .8rem 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.blogContainer .container .blog-left-layout .blogRow .blogBx .BlogContent .readMoreBtn:hover{
+    background: var(--red-color-hover);
+}
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .blogContainer .container{
+    grid-template-columns:1fr;
+    gap: 12rem;
+    }
+  }
+@media only screen and (max-width: 480px) {
+    .blogContainer .container .blog-left-layout .blogRow{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:5rem 2rem;
+    }
+    
+  }

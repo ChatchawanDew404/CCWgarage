@@ -1,0 +1,34 @@
+export const allGallery = [
+    {
+        id:1,
+        image:"/public/images/blogImage/blog6.jpg"
+    },
+    {
+        id:2,
+        image:"/public/images/blogImage/blog5.jpg"
+    },
+    {
+        id:3,
+        image:"/public/images/blogImage/blog4.jpg"
+    },
+    {
+        id:4,
+        image:"/public/images/banner1.jpg"
+    },
+    {
+        id:5,
+        image:"/public/images/banner2.jpg"
+    },
+    {
+        id:6,
+        image:"/public/images/blogImage/blog1.jpg"
+    },
+    {
+        id:7,
+        image:"/public/images/blogImage/blog2.jpg"
+    },
+    {
+        id:8,
+        image:"/public/images/blogImage/blog3.jpg"
+    },
+]

@@ -1,0 +1,102 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+  
+.service_total{
+    background: url('/public/images/banner1.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+  }
+  .service_total::after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 66, 66, 0.7);
+    z-index: -1;
+  }
+  .service_total .container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 0;
+  }
+  .service_total .service_total_bx{
+    text-align: center;
+    color: white;
+  }
+  .service_total .service_total_bx .bx-icon{
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service_total .service_total_bx .sum{
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .service_total .service_total_bx h3{
+    font-weight: 400;
+  }
+  
+
+
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+  @media only screen and (max-width: 991px) {
+    /* all-service-container */
+    .all-service-container .control-category{
+      grid-template-columns: repeat(3,1fr);
+      gap: 2rem;
+    }
+    .all-service-container .all-service-row{
+      grid-template-columns: repeat(3,1fr);
+      gap:5rem 2rem;
+    }
+  
+
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+
+    /* "service_total container*/
+    .service_total .container{
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem 0;
+    }
+  
+    
+  }
+  
+  @media only screen and (max-width: 678px) {
+   /* all-service-container */
+  .all-service-container .all-service-row{
+    grid-template-columns: repeat(2,1fr);
+    gap:5rem 2rem;
+  }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* "service_total container*/
+    .service_total .container{
+      grid-template-columns: 1fr;
+      gap: 2rem 0;
+    }
+  }
+  
+  

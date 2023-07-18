@@ -1,0 +1,75 @@
+
+/* Team section */
+.team {
+    text-align: center;
+  }
+  .team .container .heading h2{
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    font-size: 3.5rem;
+    color: var(--gray-color-1);
+  }
+  .team .container .team-col{
+    transition: all .3 ease;
+  }
+  .team .container .team-col .image{
+    overflow: hidden;
+    /* max-height: 20rem; */
+  }
+  .team .container .team-col .image img{
+    display: block;
+    margin: auto;
+    transition: all .3s ease;
+    height: 30rem;
+  }
+  .team .container .team-col:hover img{
+    transform: scale(1.1);
+  }
+  .team .container .team-col .content{
+    padding: 1rem .3rem;
+    background: rgb(243, 243, 243);
+  }
+  .team .container .team-col .username{
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem 0 0;
+    color: var(--gray-color-1);
+    font-weight: 500;
+  }
+  .team .container .team-col .JobPosition{
+    color: var(--gray-color-2);
+    margin: 2rem 0;
+  }
+  
+  
+  .team .container .team-col .social-contact{
+    display: flex;
+    justify-content: center;
+    gap: 0 1.5rem;
+  }
+  
+  .team .container .team-col .social-contact  li{
+    background: var(--red-color);
+    padding: .7rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .team .container .team-col .social-contact  li:hover{
+    background: var(--red-color-hover);
+    cursor: pointer;
+  }
+  .team .container .team-col .social-contact .box-icon{
+    color: var(--white-color);
+    font-size: 1.4rem;
+  }
+
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+  @media only screen and (max-width: 480px) {
+  /* Team section */
+  .team .container .heading h2{
+  font-size: 3rem;}
+  }

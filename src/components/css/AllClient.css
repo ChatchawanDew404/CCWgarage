@@ -1,0 +1,67 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+/* CLient section */
+.client .container .heading{text-align: center;}
+.client .container .heading h2{
+  text-transform: uppercase;
+  margin-bottom: 8rem;
+  font-size: 3.5rem;
+  color: var(--gray-color-1);
+}
+
+.client .container .client-bx{
+  transform: scale(.7);
+  /* background: rgb(243, 243, 243); */
+  text-align: center;
+  padding: 1.5rem;
+  line-height: 24px;
+  position: relative;
+  border-radius: 5px;
+  transition: all .5s ease;
+}
+.client .container .swiper-slide-active{
+  transform: scale(1);
+  background: rgb(243, 243, 243,0.5);
+  }
+  
+.client .container .client-bx .quote{
+  position: absolute;
+  color: rgb(171, 171, 171,0.2);
+  transition: all .3s ease;
+  font-size: 6.5rem;
+}
+
+.client .container .swiper-slide-active .quote{
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.client .container .client-bx .image{
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--red-color);
+  max-width: 10rem;
+  max-height: 10rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.client .container .client-bx .content p{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--gray-color-2);
+  font-weight: 300;
+}
+.client .container .client-bx .content h4{
+  margin-bottom: 1rem;
+  color: var(--gray-color-1);
+}
+
+
+
+  

@@ -1,0 +1,153 @@
+:root{
+    --red-color:#d81324;
+    --red-color-hover:rgb(141, 12, 23);
+    --white-color:#fff;
+    --gray-color-1:#272727;
+    --gray-color-2:#494848;
+    --black-color:#000;
+  }
+
+.page404Banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    background: url('../../../public/images/banner2.jpg');
+   background-size: cover;
+   background-position: center;
+
+}
+.page404Banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 0;
+}
+
+.page404Banner .content{
+    text-align: center;
+    z-index: 1;
+}
+.page404Banner .content h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+}
+.page404Banner .content p{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.page404Banner .content p .link span{
+    color:white;
+}
+.page404Banner .content p .link:nth-child(3) span{
+   color: var(--red-color);
+}
+
+
+
+/* page 404 */
+.page404 .container{
+    text-align: center;
+    padding: 20rem 0;
+}
+.page404 .container .image{
+    margin: auto;
+    max-width: 15rem;
+}
+.page404 .container h1{
+    font-size: 15rem;
+    background: #000000;
+    background: linear-gradient(to top, #4b0404 46%, #CF0000 47%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.page404 .container h2{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    color: var(--gray-color-2);
+}
+.page404 .container p{
+    margin: 4rem auto 8rem;
+    font-size: 2rem;
+   color: var(--gray-color-2);
+   max-width: 60rem;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.page404 .button-container .btn:nth-child(1){
+background:var(--red-color) ;
+color: var(--white-color);
+font-size: 1.7rem;
+padding: 1.5rem 3.5rem;
+border: 1px solid var(--red-color);
+}
+.page404 .button-container .btn:nth-child(1):hover{
+background:var(--red-color-hover) ;
+border: 1px solid var(--red-color-hover);
+cursor: pointer;
+}
+.page404 .button-container .btn:nth-child(2){
+background: var(--white-color);
+color: var(--red-color);
+border: 1px solid var(--red-color);
+font-size: 1.7rem;
+padding: 1.5rem 2.5rem;
+}
+.page404 .button-container .btn:nth-child(2):hover{
+background: var(--red-color);
+color: white;
+cursor: pointer;
+}
+
+
+
+/* *{border: 1px solid red;} */
+
+/* --------------------------------------- */
+/*                Media query              */
+/* --------------------------------------- */
+
+@media only screen and (max-width: 678px) {
+    .page404 .container{
+        padding: 15rem 0;
+    }
+    .page404 .container h1{
+        font-size: 12rem;
+    }
+    .page404 .container h2{
+        font-size: 4rem;
+
+    }
+    .page404 .container p{
+        font-size: 1.7rem;
+        max-width: 55rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .page404 .container{
+        padding: 10rem 0;
+    }
+    .page404 .container p{
+        padding: 0 1rem;
+        font-size: 1.7rem;
+        max-width: 45rem;
+    }
+}
