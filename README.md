@@ -14,11 +14,26 @@ use "npm install" in terminal
 
 use "npm run dev" to run project
 ------
+💖 Technologies and frameworks and libraryused
+- useSate
+- component
+- react-router-dom-v6
+- react-icons
+- react-countup
+- react-scroll-trigger
+------
 💖 All Pages
 - Home
 - About
 - Service
+- ViewService
 - Product
+- ViewProduct
+- ProductCartPage
+- CheckoutPage
 - Blog
-- -readBlog
-- Contac
+- ReadBlog
+- Contact
+- Register
+- Login
+- Page 404
