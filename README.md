@@ -13,6 +13,9 @@ open project
 use "npm install" in terminal
 
 use "npm run dev" to run project
+
+click Local : http://localhost/..... to open project
+
 ------
 💖 Technologies and frameworks and libraryused
 - useSate
